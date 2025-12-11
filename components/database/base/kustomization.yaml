@@ -18,3 +18,9 @@ resources:
   - db-secret.yaml
   - db-service.yaml
   - db-deployment.yaml
+  
+patches:
+  - path: pvc-patch.yaml
+    target:
+      kind: PersistentVolumeClaim
+      name: db-pvc  
